@@ -1,8 +1,7 @@
 import test from "./test"
 import director from "./director"
 import video from "./video"
-import industryFilters from "./industryFilters"
-import directorFilters from "./directorFilters"
-import clientFilters from "./clientFilters"
+import client from "./client"
+import industry from "./industry"
 
-export const schemaTypes = [test, video, director, industryFilters, directorFilters, clientFilters]
+export const schemaTypes = [test, video, director, client, industry]
