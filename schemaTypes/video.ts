@@ -27,6 +27,23 @@ export default defineType({
       title: 'Thumbnail',
       validation: (Rule) => Rule.required()
     },
+    {
+      name: 'director',
+      type: 'string',
+      title: 'Director Name',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'industry',
+      type: 'string',
+      title: 'Industry Name',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'client',
+      type: 'string',
+      title: 'Client Name',
+      validation: (Rule) => Rule.required(),
+    }
   ],
 });
-
