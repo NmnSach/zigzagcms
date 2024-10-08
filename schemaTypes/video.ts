@@ -25,12 +25,13 @@ export default defineType({
       name: 'thumbnail',
       type: 'image',
       title: 'Thumbnail',
-      validation: (Rule) => Rule.required()
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'director',
-      type: 'string',
+      type: 'reference', 
       title: 'Director Name',
+      to: [{ type: 'director' }], 
       validation: (Rule) => Rule.required(),
     },
     {
