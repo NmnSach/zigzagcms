@@ -14,6 +14,12 @@ export default defineType({
       name: 'bio',
       type: 'text',
       title: 'Biography',
+    },
+    {
+      name: 'videos',
+      type: 'array',
+      title: 'Videos',
+      of: [{ type: 'reference', to: [{ type: 'video' }] }]
     }
   ],
 });
