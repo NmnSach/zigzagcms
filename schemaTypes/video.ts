@@ -32,7 +32,7 @@ export default defineType({
       type: 'reference', 
       title: 'Director Name',
       to: [{ type: 'director' }], 
-      validation: (Rule) => Rule.required(),
+      // validation: (Rule) => Rule.required(),
     },
     {
       name: 'industry',
