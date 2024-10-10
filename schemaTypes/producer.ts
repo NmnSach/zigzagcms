@@ -15,17 +15,20 @@ export default defineType({
       name: 'Image',
       type: 'image',
       title: 'Image',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'bio',
       type: 'text',
       title: 'Biography',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'subtitle',
       type: 'text',
       title: 'Subtitle',
       description: 'For example - producer/sound specialist',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'Instagram',
