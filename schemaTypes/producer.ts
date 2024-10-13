@@ -45,7 +45,6 @@ export default defineType({
       type: 'array',
       title: 'Videos Produced',
       of: [{ type: 'reference', to: [{ type: 'video' }] }],
-      readOnly: true,
       description: 'This field shows videos associated with this producer.',
       options: {
         filter: '_type == "video" && producer._ref == $id',
