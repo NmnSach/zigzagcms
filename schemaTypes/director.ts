@@ -1,4 +1,4 @@
-import { defineType } from 'sanity'; // Importing types from Sanity
+import { defineType } from 'sanity'; 
 
 export default defineType({
   name: 'director',
