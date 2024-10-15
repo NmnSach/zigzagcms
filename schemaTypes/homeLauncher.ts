@@ -5,6 +5,12 @@ export default defineType({
     type: 'document',
     title: 'Home Launcher',
     fields: [
+      {
+        name: 'name',
+        type: 'string',
+        title: 'Name',
+        validation: (Rule) => Rule.required(),
+      },
     {
       name: 'video',
       type: 'reference',
