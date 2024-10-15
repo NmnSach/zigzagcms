@@ -4,5 +4,6 @@ import director from "./director"
 import producer from "./producer"
 import meow from "./meow"
 import team from "./team"
+import homeLauncher from "./homeLauncher"
 
-export const schemaTypes = [test, video, director, producer, meow, team]
+export const schemaTypes = [test, video, director, producer, meow, team, homeLauncher]
