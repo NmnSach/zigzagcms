@@ -1,14 +1,16 @@
 import { defineType } from "sanity";
 
 export default defineType({
-    name: 'HomeLauncher',
+    name: 'homeLauncher',
     type: 'document',
     title: 'Home Launcher',
     fields: [
     {
-      name: 'Video Link',
-      type: 'string',
-      title: 'Video/Showreel Link',
+      name: 'video',
+      type: 'reference',
+      title: 'Video/Showreel',
+      to: [{ type: 'video' }],
       validation: (Rule) => Rule.required(),
-    },]
-})
+    },
+  ],
+});
