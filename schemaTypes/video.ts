@@ -29,9 +29,9 @@ export default defineType({
     },
     {
       name: 'director',
-      type: 'reference', 
+      type: 'reference',
       title: 'Director Name',
-      to: [{ type: 'director' }], 
+      to: [{ type: 'director' }],
       validation: (Rule) => Rule.required(),
     },
     {
@@ -45,6 +45,14 @@ export default defineType({
       type: 'string',
       title: 'Client Name',
       validation: (Rule) => Rule.required(),
-    }
+    },
+    {
+      name: 'isShowreel',
+      type: 'boolean',
+      title: 'Make this video Showreel for Home Launcher Section',
+      options: {
+        layout: 'checkbox',
+      },
+    },
   ],
 });
