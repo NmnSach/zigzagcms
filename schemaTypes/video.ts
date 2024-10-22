@@ -36,14 +36,16 @@ export default defineType({
     },
     {
       name: 'industry',
-      type: 'string',
-      title: 'Industry Name',
+      type: 'reference',
+      title: 'Industry',
+      to: [{ type: 'industry' }], 
       validation: (Rule) => Rule.required(),
     },
     {
       name: 'client',
-      type: 'string',
-      title: 'Client Name',
+      type: 'reference',
+      title: 'Client',
+      to: [{ type: 'client' }], 
       validation: (Rule) => Rule.required(),
     },
     {
