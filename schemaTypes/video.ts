@@ -51,7 +51,7 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'meow',
+      name: 'Meow',
       type: 'reference',
       title: 'Meow Name',
       to: [{ type: 'meow' }],
