@@ -14,7 +14,8 @@ export default defineType({
     {
       name: 'image',
       type: 'image',
-      title: 'Industry Image',
+      title: 'Industry icon',
+      description:'Industry Icon for zigzagtv window filters',
       validation: (Rule) => Rule.required(),
     },
     {

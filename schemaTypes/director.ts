@@ -18,6 +18,13 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'Image',
+      type: 'image',
+      title: 'Image',
+      description: 'director icon for zigzagtv window filters',
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: 'bio',
       type: 'text',
       title: 'Biography',

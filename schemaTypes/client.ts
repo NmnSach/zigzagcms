@@ -14,7 +14,8 @@ export default defineType({
     {
       name: 'image',
       type: 'image',
-      title: 'Client Image',
+      title: 'Client Icon',
+      description: 'Client Icon for zigzagtv window filters',
       validation: (Rule) => Rule.required(),
     },
     {
