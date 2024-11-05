@@ -51,10 +51,10 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'meow',
+      name: 'Meow',
       type: 'reference',
       title: 'Meow Name',
-      to: [{ type: 'meow' }],
+      to: [{ type: 'Meow' }],
       description: 'Add Meow names and videos to show in the roster window.',
       validation: (Rule) => Rule.required(),
     },
