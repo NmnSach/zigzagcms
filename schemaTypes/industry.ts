@@ -12,9 +12,9 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'image',
+      name: 'icon',
       type: 'image',
-      title: 'Industry icon',
+      title: 'industry icon',
       description:'Industry Icon for zigzagtv window filters',
       validation: (Rule) => Rule.required(),
     },

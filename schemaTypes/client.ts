@@ -12,9 +12,9 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'image',
-      type: 'image',
-      title: 'Client Icon',
+      name: 'icon',
+      type: 'icon',
+      title: 'client icon',
       description: 'Client Icon for zigzagtv window filters',
       validation: (Rule) => Rule.required(),
     },
