@@ -1,4 +1,4 @@
-import { defineType } from 'sanity'; 
+import {defineType} from 'sanity'
 
 export default defineType({
   name: 'director',
@@ -19,7 +19,7 @@ export default defineType({
     },
     {
       name: 'icon',
-      type: 'icon',
+      type: 'image',
       title: 'director icon',
       description: 'director icon for zigzagtv window filters',
       validation: (Rule) => Rule.required(),
@@ -51,13 +51,13 @@ export default defineType({
       name: 'videos',
       type: 'array',
       title: 'Videos Directed',
-      of: [{ type: 'reference', to: [{ type: 'video' }] }],
+      of: [{type: 'reference', to: [{type: 'video'}]}],
       readOnly: true,
       description: 'This field shows videos associated with this director.',
       options: {
         filter: '_type == "video" && director._ref == $id',
-        filterParams: { id: '_id' },
+        filterParams: {id: '_id'},
       },
     },
   ],
-});
+})
