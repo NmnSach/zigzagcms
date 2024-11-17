@@ -1,6 +1,6 @@
 import {defineType} from 'sanity'
 
-export default {
+export default defineType({
   name: 'aboutWiki',
   title: 'About Wiki',
   type: 'document',
@@ -9,7 +9,7 @@ export default {
       name: 'title',
       title: 'Wiki Article Title',
       type: 'string',
-      validation: (Rule: {required: () => any}) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'subtitle',
@@ -23,14 +23,14 @@ export default {
     },
     {
       name: 'subtitle_link_2',
-      title: 'Subtitle link 2',
+      title: 'Subtitle Link 2',
       type: 'string',
     },
     {
       name: 'intro',
       title: 'Introduction',
       type: 'text',
-      validation: (Rule: {required: () => any}) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'history',
@@ -38,12 +38,12 @@ export default {
       type: 'object',
       fields: [
         {
-          name: 'History',
+          name: 'history',
           title: 'History Paragraph 1',
           type: 'text',
         },
         {
-          name: 'History_extended',
+          name: 'history_extended',
           title: 'History Paragraph 2',
           type: 'text',
         },
@@ -90,7 +90,7 @@ export default {
               name: 'name',
               title: 'Team Member Name',
               type: 'string',
-              validation: (Rule: {required: () => any}) => Rule.required(),
+              validation: (Rule) => Rule.required(),
             },
             {
               name: 'role',
@@ -131,16 +131,14 @@ export default {
               name: 'description',
               title: 'Description',
               type: 'text',
-              validation: (Rule: {required: () => any}) => Rule.required(),
+              validation: (Rule) => Rule.required(),
             },
             {
               name: 'relatedItems',
               title: 'Related Items',
               type: 'array',
               of: [{type: 'string'}],
-              validation: (Rule: {
-                min: (arg0: number) => {(): any; new (): any; required: {(): any; new (): any}}
-              }) => Rule.min(1).required(),
+              validation: (Rule) => Rule.min(1).required(),
             },
           ],
         },
@@ -164,11 +162,10 @@ export default {
               title: 'List',
               type: 'array',
               of: [{type: 'string'}],
-              validation: (Rule: {optional: () => any}) => Rule.optional(),
             },
           ],
         },
       ],
     },
   ],
-}
+})
