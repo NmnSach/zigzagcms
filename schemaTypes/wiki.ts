@@ -7,13 +7,23 @@ export default {
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Wiki Article Title',
       type: 'string',
       validation: (Rule: {required: () => any}) => Rule.required(),
     },
     {
       name: 'subtitle',
-      title: 'Subtitle',
+      title: 'Article Subtitle',
+      type: 'string',
+    },
+    {
+      name: 'subtitle_link_1',
+      title: 'Subtitle Link 1',
+      type: 'string',
+    },
+    {
+      name: 'subtitle_link_2',
+      title: 'Subtitle link 2',
       type: 'string',
     },
     {
@@ -28,13 +38,18 @@ export default {
       type: 'object',
       fields: [
         {
-          name: 'content',
-          title: 'Content',
+          name: 'History',
+          title: 'History Paragraph 1',
+          type: 'text',
+        },
+        {
+          name: 'History_extended',
+          title: 'History Paragraph 2',
           type: 'text',
         },
         {
           name: 'image',
-          title: 'Image',
+          title: 'Wiki Intro Card Image',
           type: 'image',
           options: {hotspot: true},
         },
@@ -46,18 +61,18 @@ export default {
       type: 'object',
       fields: [
         {
-          name: 'description',
-          title: 'Description',
+          name: 'work_description',
+          title: 'Work Description',
           type: 'text',
         },
         {
-          name: 'translationLink',
+          name: 'translation_link',
           title: 'Translation Link',
           type: 'url',
         },
         {
-          name: 'images',
-          title: 'Images',
+          name: 'image',
+          title: 'Work Section Card Image',
           type: 'array',
           of: [{type: 'image', options: {hotspot: true}}],
         },
@@ -73,13 +88,13 @@ export default {
           fields: [
             {
               name: 'name',
-              title: 'Name',
+              title: 'Team Member Name',
               type: 'string',
               validation: (Rule: {required: () => any}) => Rule.required(),
             },
             {
               name: 'role',
-              title: 'Role',
+              title: 'Team Member Role',
               type: 'string',
             },
           ],
@@ -98,7 +113,7 @@ export default {
         },
         {
           name: 'image',
-          title: 'Image',
+          title: 'Award Card Image',
           type: 'image',
           options: {hotspot: true},
         },
@@ -108,7 +123,28 @@ export default {
       name: 'seeAlso',
       title: 'See Also',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'description',
+              title: 'Description',
+              type: 'text',
+              validation: (Rule: {required: () => any}) => Rule.required(),
+            },
+            {
+              name: 'relatedItems',
+              title: 'Related Items',
+              type: 'array',
+              of: [{type: 'string'}],
+              validation: (Rule: {
+                min: (arg0: number) => {(): any; new (): any; required: {(): any; new (): any}}
+              }) => Rule.min(1).required(),
+            },
+          ],
+        },
+      ],
     },
     {
       name: 'externalLinks',
@@ -119,22 +155,16 @@ export default {
           type: 'object',
           fields: [
             {
-              name: 'title',
-              title: 'Title',
-              type: 'string',
-              validation: (Rule: {required: () => any}) => Rule.required(),
+              name: 'description',
+              title: 'Description',
+              type: 'text',
             },
             {
-              name: 'url',
-              title: 'URL',
-              type: 'url',
-              validation: (Rule: {
-                uri: (arg0: {allowRelative: boolean; scheme: string[]}) => any
-              }) =>
-                Rule.uri({
-                  allowRelative: false,
-                  scheme: ['http', 'https'],
-                }),
+              name: 'list',
+              title: 'List',
+              type: 'array',
+              of: [{type: 'string'}],
+              validation: (Rule: {optional: () => any}) => Rule.optional(),
             },
           ],
         },
