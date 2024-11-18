@@ -61,9 +61,24 @@ export default defineType({
       type: 'object',
       fields: [
         {
-          name: 'work_description',
+          name: 'work_description_1',
           title: 'Work Description',
           type: 'text',
+        },
+        {
+          name: 'work_description_2',
+          title: 'Work Description',
+          type: 'text',
+        },
+        {
+          name: 'work_description_3',
+          title: 'Work Description',
+          type: 'text',
+        },
+        {
+          name: 'translation_link_text',
+          title: 'Translation Link Text',
+          type: 'string',
         },
         {
           name: 'translation_link',
