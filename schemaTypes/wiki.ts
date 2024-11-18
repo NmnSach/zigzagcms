@@ -68,13 +68,13 @@ export default defineType({
         {
           name: 'translation_link',
           title: 'Translation Link',
-          type: 'url',
+          type: 'string',
         },
         {
           name: 'image',
           title: 'Work Section Card Image',
-          type: 'array',
-          of: [{type: 'image', options: {hotspot: true}}],
+          type: 'image',
+          options: {hotspot: true},
         },
       ],
     },
