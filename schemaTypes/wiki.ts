@@ -62,17 +62,17 @@ export default defineType({
       fields: [
         {
           name: 'work_description_1',
-          title: 'Work Description',
+          title: 'Work Description 1',
           type: 'text',
         },
         {
           name: 'work_description_2',
-          title: 'Work Description',
+          title: 'Work Description 2',
           type: 'text',
         },
         {
           name: 'work_description_3',
-          title: 'Work Description',
+          title: 'Work Description 3',
           type: 'text',
         },
         {
@@ -137,25 +137,18 @@ export default defineType({
     {
       name: 'seeAlso',
       title: 'See Also',
-      type: 'array',
-      of: [
+      type: 'object',
+      fields: [
         {
-          type: 'object',
-          fields: [
-            {
-              name: 'description',
-              title: 'Description',
-              type: 'text',
-              validation: (Rule) => Rule.required(),
-            },
-            {
-              name: 'relatedItems',
-              title: 'Related Items',
-              type: 'array',
-              of: [{type: 'string'}],
-              validation: (Rule) => Rule.min(1).required(),
-            },
-          ],
+          name: 'description',
+          title: 'Description',
+          type: 'text',
+        },
+        {
+          name: 'relatedItems',
+          title: 'Related Items',
+          type: 'array',
+          of: [{type: 'string'}],
         },
       ],
     },
