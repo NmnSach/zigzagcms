@@ -7,5 +7,19 @@ import team from './team'
 import industry from './industry'
 import client from './client'
 import wiki from './wiki'
+import cookiepolicy from './cookiepolicy'
+import privacyPolicy from './privacyPolicy'
 
-export const schemaTypes = [test, video, director, producer, meow, team, client, industry, wiki]
+export const schemaTypes = [
+  test,
+  video,
+  director,
+  producer,
+  meow,
+  team,
+  client,
+  industry,
+  wiki,
+  cookiepolicy,
+  privacyPolicy,
+]
