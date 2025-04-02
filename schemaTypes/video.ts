@@ -28,6 +28,16 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'videoSize',
+      type: 'string',
+      title: 'Video Size',
+    },
+    {
+      name: 'resolution',
+      type: 'string',
+      title: 'Resolution',
+    },
+    {
       name: 'director',
       type: 'reference',
       title: 'Director Name',
@@ -39,6 +49,16 @@ export default defineType({
       title: 'Producer Name',
       to: [{type: 'producer'}],
       description: 'Add producer name and videos to show in the roster window.',
+    },
+    {
+      name: 'dop',
+      type: 'string',
+      title: 'Director of Photography (DoP)',
+    },
+    {
+      name: 'format',
+      type: 'string',
+      title: 'Format',
     },
     {
       name: 'team',
