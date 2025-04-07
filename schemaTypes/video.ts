@@ -86,5 +86,13 @@ export default defineType({
       title: 'Client',
       to: [{type: 'client'}],
     },
+    {
+      name: 'isShowreel',
+      type: 'boolean',
+      title: 'Make this video Showreel for Home Launcher Section',
+      options: {
+        layout: 'checkbox',
+      },
+    },
   ],
 })

@@ -9,7 +9,6 @@ import client from './client'
 import wiki from './wiki'
 import cookiepolicy from './cookiepolicy'
 import privacyPolicy from './privacyPolicy'
-import showreel from './showreel'
 
 export const schemaTypes = [
   test,
@@ -23,5 +22,4 @@ export const schemaTypes = [
   wiki,
   cookiepolicy,
   privacyPolicy,
-  showreel,
 ]
