@@ -1,20 +1,15 @@
 import {defineType} from 'sanity'
 
 export default defineType({
-  name: 'video',
+  name: 'showreel',
   type: 'document',
-  title: 'Video',
+  title: 'Showreel',
   fields: [
     {
       name: 'title',
       type: 'string',
       title: 'Title',
       validation: (Rule) => Rule.required(),
-    },
-    {
-      name: 'description',
-      type: 'text',
-      title: 'Description',
     },
     {
       name: 'link',
@@ -59,32 +54,6 @@ export default defineType({
       name: 'format',
       type: 'string',
       title: 'Format',
-    },
-    {
-      name: 'team',
-      type: 'reference',
-      title: 'Team Member Name',
-      to: [{type: 'team'}],
-      description: 'Add team member name and videos to show in the roster window.',
-    },
-    {
-      name: 'Meow',
-      type: 'reference',
-      title: 'Meow Name',
-      to: [{type: 'Meow'}],
-      description: 'Add Meow names and videos to show in the roster window.',
-    },
-    {
-      name: 'industry',
-      type: 'reference',
-      title: 'Industry',
-      to: [{type: 'industry'}],
-    },
-    {
-      name: 'client',
-      type: 'reference',
-      title: 'Client',
-      to: [{type: 'client'}],
     },
   ],
 })
